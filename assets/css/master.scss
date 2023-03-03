@@ -1,0 +1,82 @@
+body {
+    height: 100vh;
+    background: #ADA996;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    font-family: 'Roboto Slab', serif;
+
+    main {
+        height: 100%;
+
+        >div {
+            height: 100%;
+
+            >div {
+                height: 100%;
+                display: flex;
+                align-items: center !important;
+
+                >section {
+                    height: 80%;
+
+
+                    h6 {
+                        font-weight: bolder;
+                    }
+
+                    button {
+                        text-transform: capitalize;
+                    }
+
+
+                }
+            }
+        }
+
+
+
+
+    }
+}
+
+.add {
+    >*:not(button) {
+        width: 90%;
+        display: flex;
+        justify-content: center;
+    }
+
+    figure {
+        width: 170px;
+        height: 170px;
+
+        img {
+            width: 1005px;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    z-index: 100;
+    width: 500px;
+    height: 310px;
+    border: 1px solid white;
+    background: rgb(223, 218, 218);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-evenly;
+    box-shadow: 0 0 5px 1px white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.bgBody {
+    background: rgba(0, 0, 0, 0.708);
+}

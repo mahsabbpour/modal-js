@@ -1,0 +1,65 @@
+body {
+  height: 100vh;
+  background: #ADA996;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-family: "Roboto Slab", serif;
+}
+body main {
+  height: 100%;
+}
+body main > div {
+  height: 100%;
+}
+body main > div > div {
+  height: 100%;
+  display: flex;
+  align-items: center !important;
+}
+body main > div > div > section {
+  height: 80%;
+}
+body main > div > div > section h6 {
+  font-weight: bolder;
+}
+body main > div > div > section button {
+  text-transform: capitalize;
+}
+
+.add {
+  z-index: 100;
+  width: 500px;
+  height: 310px;
+  border: 1px solid white;
+  background: rgb(223, 218, 218);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  box-shadow: 0 0 5px 1px white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.add > *:not(button) {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.add figure {
+  width: 170px;
+  height: 170px;
+}
+.add figure img {
+  width: 1005px;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.bgBody {
+  background: rgba(0, 0, 0, 0.708);
+}/*# sourceMappingURL=master.css.map */

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/master.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="container-fluid container-xxl ">
+        <div class="container-fluid ">
+            <div class="row justify-content-center mt-5">
+                <section class="col-11">
+                    <h1 class="text-center">
+                        How to use and customize
+                    </h1>
+                    <hr>
+                    <h6 class="text-dark text-center">Modal Type</h6>
+                    <p class="text-center">Sweet alert with modal type and customize message alert with html and css</p>
+
+                    <div class="row px-0 mx-0  justify-content-evenly align-items-center my-4">
+                        <button onclick="_add()" class="btn btn-success col-2">success</button>
+                        <button onclick="_add2()" class="btn btn-danger col-2">error</button>
+                        <button onclick="_add3()" class="btn btn-warning col-2">warning</button>
+                        <button onclick="_add4()" class="btn btn-primary col-2">info</button>
+                        <button onclick="_add5()" class="btn btn-secondary col-2">question</button>
+
+                    </div>
+
+                    <h6 class="text-center text-dark">
+                        Custom image and alert size
+                    </h6>
+                    <p class="text-center">
+                        Alert with custom icon and background icon
+                    </p>
+                    <div class="row px-0 mx-0 justify-content-center align-items-center my-4">
+                        <button onclick="_add6()" class="btn btn-primary mx-2 col-2">custom icon</button>
+                        <button onclick="_add7()" class="btn btn-primary mx-2 col-3">custom background image</button>
+
+                    </div>
+                    <h6 class="text-center text-black">Alert with input type</h6>
+                    <p class="text-center">Sweet Alert with Input and loading button</p>
+                    <div class="row px-0 mx-0 justify-content-center align-items-center my-4">
+                        <button onclick="_add8()" class="btn btn-primary mx-2 col-2">subscribe</button>
+                    </div>
+
+                    <h6 class="text-center text-dark">Redirect to visit another site</h6>
+                    <p class="text-center">Alert to visit a link to another site</p>
+                    <div class="row px-0 mx-0 justify-content-center align-items-center my-4">
+                        <button onclick="_add9()" class="btn btn-primary mx-2 col-2">redirect to utopion</button>
+                    </div>
+
+
+
+                </section>
+
+
+            </div>
+        </div>
+
+    </main>
+    <script>
+        let _success = document.createElement('div')
+        _success.innerHTML =
+            `<i class='bi bi-check-circle text-success display-4'></i>
+            <strong class='h4 text-capitalize '>success </strong>
+        <p> You clicked the Success button!</p>
+        <button onclick="_remove()" class='btn btn-primary col-3'> ok </button><br>`
+        _success.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_success)
+
+        function _add() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _success.classList.remove('d-none')
+            _success.classList.add('add')
+
+        }
+
+        function _remove() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _success.classList.remove('add')
+            _success.classList.add('d-none')
+        }
+        // *********
+        let _error = document.createElement('div')
+        _error.innerHTML =
+            `<i class='bi bi-x-circle text-danger display-4'></i>
+            <strong class='h4 text-capitalize '> error!</strong>
+        <p>You clicked the error button!</p>
+        <button onclick="_remove2()" class='btn btn-primary col-3'> ok </button><br>`
+        _error.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_error)
+
+        function _add2() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _error.classList.remove('d-none')
+            _error.classList.add('add')
+
+        }
+
+        function _remove2() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _error.classList.remove('add')
+            _error.classList.add('d-none')
+        }
+        // *********
+        let _warning = document.createElement('div')
+        _warning.innerHTML =
+            `<i class='bi bi-exclamation-circle text-warning display-4'></i>
+            <strong class='h4 text-capitalize '> warning!</strong>
+        <p>You clicked the warning button!</p>
+        <button onclick="_remove3()" class='btn btn-primary col-3'> ok </button><br>`
+        _warning.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_warning)
+
+        function _add3() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _warning.classList.remove('d-none')
+            _warning.classList.add('add')
+
+        }
+
+        function _remove3() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _warning.classList.remove('add')
+            _warning.classList.add('d-none')
+        }
+        // *********
+        let _info = document.createElement('div')
+        _info.innerHTML =
+
+            `<i class='bi bi-info-circle text-info display-4'></i>
+        <strong class='h4 text-capitalize '> info!</strong>
+        <p>You clicked the info button!</p>
+        <button onclick="_remove4()" class='btn btn-primary col-3'> ok </button><br>`
+        _info.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_info)
+
+        function _add4() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _info.classList.remove('d-none')
+            _info.classList.add('add')
+
+        }
+
+        function _remove4() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _info.classList.remove('add')
+            _info.classList.add('d-none')
+        }
+        // *********
+        let _question = document.createElement('div')
+        _question.innerHTML =
+            `<i class='bi  bi-question-circle text-secondary display-4'></i>
+            <strong class='h4 text-capitalize '>question!</strong>
+        <p>You clicked the question button!</p>
+        <button onclick="_remove5()" class='btn btn-primary col-3'> ok </button><br>`
+        _question.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_question)
+
+        function _add5() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _question.classList.remove('d-none')
+            _question.classList.add('add')
+
+        }
+
+        function _remove5() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _question.classList.remove('add')
+            _question.classList.add('d-none')
+        }
+        // *********
+        let _icon = document.createElement('div')
+        _icon.innerHTML =
+            `<figure><img class="w-100 h-100 object-fit-cover" src="assets/img/1.PNG" alt=""></img></figure>
+            <strong class='h4 text-capitalize '>custom icon!</strong>
+        <p>Alert with a custom image.</p>
+        <button onclick="_remove6()" class='btn btn-primary col-3'> ok </button><br>`
+        _icon.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_icon)
+
+        function _add6() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _icon.classList.remove('d-none')
+            _icon.classList.add('add')
+
+        }
+
+        function _remove6() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _icon.classList.remove('add')
+            _icon.classList.add('d-none')
+        }
+        // *********
+        let _cbi = document.createElement('div')
+        _cbi.innerHTML =
+
+            ` <strong class="h5"><p class="text-center">Custom background image, width and padding.</p></strong>
+        <button onclick="_remove7()" class='btn btn-primary col-2'> ok </button><br>`
+        _cbi.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_cbi)
+
+        function _add7() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _cbi.classList.remove('d-none')
+            _cbi.classList.add('add')
+
+        }
+
+        function _remove7() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _cbi.classList.remove('add')
+            _cbi.classList.add('d-none')
+        }
+        // *********
+        let _subscribe = document.createElement('div')
+        _subscribe.innerHTML =
+
+            ` <h3> Submit email to subscribe</h3>
+        <form class="col-10">
+            <input type="email" class="form-control " id="exampleFormControlInput1" placeholder="..........@gmail.com">
+
+            </form>
+        <button onclick="_remove8()" class='btn btn-primary col-3 mx-2'>submit</button>
+        <button onclick="_remove8()" class='btn btn-secondary col-3 mx-2'>cancel</button><br>`
+        _subscribe.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_subscribe)
+
+        function _add8() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _subscribe.classList.remove('d-none')
+            _subscribe.classList.add('add')
+
+        }
+
+        function _remove8() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _subscribe.classList.remove('add')
+            _subscribe.classList.add('d-none')
+        }
+        // *********
+        let _redirect = document.createElement('div')
+        _redirect.innerHTML =
+        `<i class='bi bi-exclamation-circle text-warning display-6'></i>
+        <strong class='h4 text-capitalize '>Are you sure?</strong>
+        <p>You will be redirected to https://utopian.io</p>
+        <button onclick="_remove9()" class='btn btn-primary col-4 mx-2'>yes, visite link!</button>
+        <button onclick="_remove9()" class='btn btn-secondary col-2 mx-2'>cancel</button><br>`
+        _redirect.classList.add('d-none')
+        document.getElementsByTagName('body')[0].appendChild(_redirect)
+
+        function _add9() {
+            document.getElementsByTagName('body')[0].classList.add('bgBody')
+            _redirect.classList.remove('d-none')
+            _redirect.classList.add('add')
+
+        }
+
+        function _remove9() {
+            document.getElementsByTagName('body')[0].classList.remove('bgBody')
+            _redirect.classList.remove('add')
+            _redirect.classList.add('d-none')
+        }
+
+
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
